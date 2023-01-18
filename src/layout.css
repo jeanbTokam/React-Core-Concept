@@ -1,0 +1,68 @@
+.input{
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 6px;
+      
+      resize: vertical;
+      margin-left: 3cm;
+      margin-right: 3cm;
+    
+      margin-top: 1cm;
+      background-color: #a7e9e6;
+   }
+   .input:focus{
+      border: 1px solid #555;
+   }
+   .input[type=text] {
+      background-color: #96b6c9;
+      color: rgb(49, 33, 33);
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 3cm;
+      margin-right: 3cm;
+      margin-top: 1cm;
+   }
+
+   .input[type=text]:hover {
+      background-color: #7ad6ec;
+   }
+
+   .button{
+      background-color: #c52ab0;
+      color: rgb(29, 21, 21);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 3cm;
+      margin-right: 3cm;
+      margin-bottom: 1cm;
+      margin-top: 1cm;
+
+   }
+   .practice{
+      margin-left: 3cm;
+      margin-right: 3cm;
+      margin-bottom: 1cm;
+      margin-top: 1cm;
+   }
+.delete{
+      margin-top: 1cm;
+      margin-left: 3cm;
+      margin-right: 1cm;
+      margin-bottom: 1cm;
+      background-color: aqua;
+}
+.card{
+   margin-left:3cm;
+}
+.check{
+   margin-left: 2cm;
+   margin-right: 2cm;
+   margin-bottom: 1cm;
+   margin-top: 1cm;
+}
