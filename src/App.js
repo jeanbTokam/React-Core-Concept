@@ -1,53 +1,33 @@
 import { Button, Card, Input, link, Checkbox } from 'antd'
 import './layout.css'
-import { useState } from 'react';
+import React, { useState } from 'react';
+import * as REACT from "react";
 
+
+
+/*
+useRef => just rerender once. decrease the amount of rerendering.
+Compare 2  set of code with and without useRef  on the console dev tools to assess the performance of this test
+*/ 
 
 function App() {
-
-const [input, setInput] = useState('')
-const[Todos, setTodos] = useState([])
+       const [input, setInput] = React.useState("")
 
 
-const handleChange = (e)=>{
-  setInput(e.target.value)
-}
-
-const handleClick = ()=>{
-  setTodos([...Todos, input])
-  setInput('')
-}
-
-  return (
-    <div className="App">
-        <h1>PRACTICE</h1>
-        <div className="practice">
-          <Input 
-          className="input"
-          onChange={handleChange}
-          value={input}
-          />
-         
-          <Button 
-          className="button"
-          onClick={handleClick}
-          >Add</Button>
-          {
-            Todos.map((item)=>{
-              return(
-                <><div>
-                  <ul>
-                    <li> {item}</li>
-                  </ul>
-
-                </div><Button className="delete" onClick={() => setTodos(Todos.filter(todo => item !== todo))}>Delete</Button></>
-              )
-            }
-            )
-          }
+       React.useEffect(() => {
+          console.log("RERENDER")  
+       })
+  
+    return (
+      <div className="App">
+          <h1>PRACTICE</h1>
+          <div>
+            <Input onChange={(e) => setInput(e.target.value)} />
+            <Button onClick={() => alert(input)}>Send</Button>
           </div>
-
-    </div>
-  );
+          
+  
+      </div>
+    );
 }
 export default App;
